@@ -1,0 +1,21 @@
+<h1> <%= @student.first_name %> <%= @student.last_name %> </h1>
+<p>
+	Birthday: <%= @student.birthday.to_s %>
+</p>
+
+<p>
+	Score: <%= @student.score.to_s %>
+</p>
+
+<p>
+	<a href = "/students"> Back to Student Index</a>
+</p>
+
+<p>
+	<a href ="/students/<%= @student.id%>/edit">Eidt Student Info </a>
+<p>
+
+<form action = "/students/<%= @student.id %>" method ="POST">
+	<input type = "hidden" name ="_method" value ="DELETE"/>
+	<input type = "submit" value = "Delete this student"/>
+</form>

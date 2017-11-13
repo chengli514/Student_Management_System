@@ -1,0 +1,21 @@
+
+<h1> Students<h1>
+<a href = "/students/new"> Add a new student </a>
+<% if @students.any? %>
+	<ul id = "student">
+		<% @students.each do |student| %>
+			<li><a href = "/students/<%= student.id%>"><%= student.first_name %></a></li>
+		<% end %>
+	</ul>
+<% else %>
+
+	<p> No students' record yet! </p>
+<% end %>
+		
+
+
+
+
+
+	
+
