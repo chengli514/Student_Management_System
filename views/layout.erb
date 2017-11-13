@@ -18,10 +18,10 @@
 				<li> <a href = "/contact" title = "Contact">Contact</a>
 				</li>
 				<li> <a href = "/students" title = "Students">Students</a></li>
-				<li> <a href = "/comment" title = "Comment">Comment</a>
+				<li> <a href = "/comments" title = "Comments">Comments</a>
 				</li>
-				<li> <a href = "/video" title = "Video"></a>Video</li>
-				<li> <a href = "/login" title = "Login"></a>Login</li>
+				<li> <a href = "/video" title = "Video">Video</a></li>
+				<li> <a href = "/<%= if session[:logged_in] then 'logout' else 'login' end %>" title = "<%= if session[:logged_in] then 'Logout' else 'Login' end %>"><%= if session[:logged_in] then 'Logout' else 'Login' end %></a></li>
 			</ul>
 		
 

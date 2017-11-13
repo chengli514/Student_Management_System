@@ -4,12 +4,12 @@
 <% if @students.any? %>
 	<ul id = "student">
 		<% @students.each do |student| %>
-			<li><a href = "/students/<%= student.id%>"><%= student.first_name %></a></li>
+			<li><a href = "/students/<%= student.id%>"><%= student.first_name %> <%= student.last_name %></a></li>
 		<% end %>
 	</ul>
 <% else %>
 
-	<p> No students' record yet! </p>
+	<p> No students recorded yet! </p>
 <% end %>
 		
 

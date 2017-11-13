@@ -1,18 +1,14 @@
 require 'dm-core'
 require 'dm-migrations'
 
-DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/student.db")
+DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/comment.db")
 
-
-
-class Student
+class Comment
 	include DataMapper::Resource
 	property :id, Serial
-	property :first_name, String
-	property :last_name, String
-	property :birthday, Date
-	property :address, Text
-	property :score, Integer
+	property :name, String
+	property :content, Text
+	property :time_created, DateTime
 end
 
 configure do

@@ -1,14 +1,14 @@
-<form >
+<form>
   First name:
-  <input type="text" name="firstname" value=""><br>
+  <input type="text" name="firstname" value="<%= if @student.nil? then "" else @student.first_name end%>"/><br>
   Last name:
-  <input type="text" name="lastname" value=""><br>
+  <input type="text" name="lastname" value="<%= if @student.nil? then "" else @student.last_name end%>"/><br>
   Birthday(mm/dd/yyyy):
-  <input id ="birthday" type = "text" name = "birthday" value= ""><br>
+  <input id ="birthday" type = "text" name = "birthday" value= "<%= if @student.nil? then "" else (@student.birthday.strftime('%m/%d/%Y') if @student.birthday) end%>"/><br>
   Address:
   <textarea id = "address" name = "address"></textarea><br>
   Score:
-  <input id = "score"  type = "number" name = "score" value = ""><br>
+  <input id = "score"  type = "number" name = "score" value = "<%= if @student.nil? then "" else @student.score end%>"/><br>
 
   <input type="submit" value="Submit">
 </form>
